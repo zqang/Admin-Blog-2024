@@ -13,7 +13,7 @@ import { SignInComponent } from './core/pages/auth/pages/sign-in/sign-in.compone
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'blog/dashboard',
+    redirectTo: 'admin/blog/dashboard',
     pathMatch: 'full',
   },
   {
