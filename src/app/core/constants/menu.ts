@@ -3,53 +3,59 @@ import { MenuItem } from '../models/menu.model';
 export class Menu {
   public static pages: MenuItem[] = [
     {
-      group: 'Base',
-      separator: false,
-      items: [
-        {
-          icon: 'assets/icons/heroicons/outline/chart-pie.svg',
-          label: 'Dashboard',
-          route: '/dashboard',
-          children: [
-            { label: 'Nfts', route: '/dashboard/nfts' },
-            { label: 'Podcast', route: '/dashboard/podcast' },
-          ],
-        },
-        {
-          icon: 'assets/icons/heroicons/outline/lock-closed.svg',
-          label: 'Auth',
-          route: '/auth',
-          children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
-            { label: 'Sign in', route: '/auth/sign-in' },
-            { label: 'Forgot Password', route: '/auth/forgot-password' },
-            { label: 'New Password', route: '/auth/new-password' },
-            { label: 'Two Steps', route: '/auth/two-steps' },
-          ],
-        },
-      ],
-    },
-    {
-      group: 'Collaboration',
+      group: 'Blog',
       separator: true,
       items: [
         {
-          icon: 'assets/icons/heroicons/outline/download.svg',
-          label: 'Download',
-          route: '/download',
-        },
-        {
-          icon: 'assets/icons/heroicons/outline/gift.svg',
-          label: 'Gift Card',
-          route: '/gift',
+          icon: 'assets/icons/heroicons/outline/pencil-square.svg',
+          label: 'Post',
+          route: '/admin/blog',
+          children: [
+            { label: 'Dashboard', route: '/admin/blog/dashboard' },
+            { label: 'Create New Post', route: '/admin/blog/new' },
+          ],
         },
         {
           icon: 'assets/icons/heroicons/outline/users.svg',
-          label: 'Users',
-          route: '/users',
+          label: 'Author',
+          route: '/admin/author',
+          children: [
+            { label: 'Dashboard', route: '/admin/author/dashboard' },
+            { label: 'Create New Author', route: '/admin/author/new' },
+          ],
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/tag.svg',
+          label: 'Category',
+          route: '/admin/category',
+          children: [
+            { label: 'Dashboard', route: '/admin/category/dashboard' },
+            { label: 'Create New Category', route: '/admin/category/new' },
+          ],
         },
       ],
     },
+    // {
+    //   group: 'Collaboration',
+    //   separator: true,
+    //   items: [
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/download.svg',
+    //       label: 'Download',
+    //       route: '/download',
+    //     },
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/gift.svg',
+    //       label: 'Gift Card',
+    //       route: '/gift',
+    //     },
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/users.svg',
+    //       label: 'Users',
+    //       route: '/users',
+    //     },
+    //   ],
+    // },
     {
       group: 'Config',
       separator: false,

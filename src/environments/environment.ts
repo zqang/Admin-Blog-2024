@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  JWT_ALLOWED_DOMAIN: 'localhost:44305',
 };
 
 /*

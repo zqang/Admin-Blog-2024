@@ -84,6 +84,11 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        table: {
+          DEFAULT: 'hsl(var(--table))',
+          odd: 'hsl(var(--table-odd))',
+          even: 'hsl(var(--table-even))'
+        }
       },
     },
     fontFamily: {

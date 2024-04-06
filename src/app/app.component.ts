@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 import { SvgIconComponent } from 'angular-svg-icon';
-import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
 import { ResponsiveHelperComponent } from './shared/components/responsive-helper/responsive-helper.component';
 
