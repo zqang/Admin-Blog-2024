@@ -1,1 +1,74 @@
-<p>create-post works!</p>
+<section class="glass">
+  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+    <h2 class="mb-4 text-xl font-bold text-foreground">Create new post</h2>
+    <form
+      action="#"
+      class="flex flex-col gap-8 align-middle justify-center"
+      [formGroup]="postForm"
+    >
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+        <div class="sm:col-span-2">
+          <label
+            for="name"
+            class="block mb-2 text-sm font-medium text-foreground"
+            >Post Title</label
+          >
+          <input
+            formControlName="title"
+            type="text"
+            name="name"
+            id="name"
+            class="bg-input border border-gray-300 text-foreground text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            placeholder="Type post title"
+            required=""
+          />
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="excerpt"
+            class="block mb-2 text-sm font-medium text-foreground"
+            >Excerpt</label
+          >
+          <textarea
+            id="excerpt"
+            rows="4"
+            formControlName="excerpt"
+            class="block p-2.5 w-full text-sm text-foreground bg-input rounded-lg border border-gray-300 focus:ring-primary focus:border-primary dark:border-gray-600 dark:placeholder-gray-400"
+            placeholder="Your excerpt here"
+            maxlength="255"
+          ></textarea>
+        </div>
+        <div>
+          <app-multi-select
+            label="Tags"
+            [options]="options"
+            (selectedOptionsChange)="(tagChange)"
+          ></app-multi-select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block mb-2 text-sm font-medium text-foreground"
+            >Content</label
+          >
+          <ckeditor
+            name="content"
+            id="content"
+            class="block min-h-[300px] p-2.5 w-full text-sm text-foreground bg-input rounded-lg border border-gray-300 focus:ring-primary focus:border-primary dark:border-gray-600 dark:placeholder-gray-400"
+            [data]="editorData"
+            [editor]="Editor"
+            formControlName="content"
+          ></ckeditor>
+        </div>
+      </div>
+      <app-button
+        type="submit"
+        impact="bold"
+        tone="primary"
+        shape="rounded"
+        size="medium"
+        [disabled]="postForm.invalid"
+        (click)="createPost()"
+        >Create</app-button
+      >
+    </form>
+  </div>
+</section>

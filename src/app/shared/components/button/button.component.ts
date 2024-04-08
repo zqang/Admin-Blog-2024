@@ -7,6 +7,7 @@ type ButtonProps = {
   size: 'small' | 'medium' | 'large';
   shape: 'square' | 'rounded' | 'pill';
   tone: 'primary' | 'danger' | 'success' | 'warning' | 'info' | 'light';
+  type: 'button' | 'submit' | 'reset';
 };
 
 @Component({
@@ -24,6 +25,8 @@ export class ButtonComponent implements OnInit {
     transform: (value: boolean | string) =>
       typeof value === 'string' ? value === '' : value,
   });
+  type = input<ButtonProps['type']>('button');
+  disabled = input(false);
 
   @Output() buttonClick = new EventEmitter<void>();
 

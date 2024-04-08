@@ -19,6 +19,7 @@
     --border: 214 32% 91%;
     --table: 192 15% 94%;
     --table-even: 240 3% 94%;
+    --input: 210 20% 98%;
   }
 
   .dark {
@@ -35,6 +36,7 @@
     --border: 0 0% 14.9%;
     --table: 215 27.9% 16.9%;
     --table-even: 211 12% 48%;
+    --input: 217 19.1% 26.7%;
   }
 
   :root[data-theme='violet'] {

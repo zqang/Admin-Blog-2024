@@ -86,8 +86,10 @@ module.exports = {
         },
         table: {
           DEFAULT: 'hsl(var(--table))',
-          odd: 'hsl(var(--table-odd))',
           even: 'hsl(var(--table-even))'
+        },
+        input: {
+          DEFAULT: 'hsl(var(--input))',
         }
       },
     },
