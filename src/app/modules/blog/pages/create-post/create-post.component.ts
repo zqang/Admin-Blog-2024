@@ -30,9 +30,8 @@ export class CreatePostComponent {
   // public Editor: any = InlineEditor;
   editorData = '<p>Hello, world!</p>';
   options: string[] = ['option1', 'option2', 'option3'];
-  fb = inject(FormBuilder);
-
   ckEditor: any;
+  fb = inject(FormBuilder);
 
   postForm = this.fb.group({
     title: this.fb.control('', [Validators.required, Validators.minLength(5)]),
@@ -48,6 +47,10 @@ export class CreatePostComponent {
   });
 
   tagChange(option: string) {
+    console.log(option);
+  }
+
+  categoryChange(option: string) {
     console.log(option);
   }
 

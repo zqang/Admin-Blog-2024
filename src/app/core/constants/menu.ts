@@ -19,18 +19,18 @@ export class Menu {
           icon: 'assets/icons/heroicons/outline/users.svg',
           label: 'Author',
           route: '/admin/author',
-          children: [
-            { label: 'Dashboard', route: '/admin/author/dashboard' },
-            { label: 'Create New Author', route: '/admin/author/new' },
-          ],
+          children: [{ label: 'Profile', route: '/admin/author/profile' }],
         },
         {
-          icon: 'assets/icons/heroicons/outline/tag.svg',
-          label: 'Category',
-          route: '/admin/category',
+          icon: 'assets/icons/heroicons/outline/rectangle-group.svg',
+          label: 'Content Organization',
+          route: '/admin/content-organization',
           children: [
-            { label: 'Dashboard', route: '/admin/category/dashboard' },
-            { label: 'Create New Category', route: '/admin/category/new' },
+            {
+              label: 'Category',
+              route: '/admin/content-organization/category',
+            },
+            { label: 'Tag', route: '/admin/content-organization/tag' },
           ],
         },
       ],
